@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CI/CD Demo</title>
+</head>
+<body>
+    <h1>Welcome to CI/CD Demo</h1>
+    <p id="api-message">Loading...</p>
+    <script>
+        // Fetches data from the backend API
+        fetch('/api')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('api-message').innerText = data.message;
+            });
+    </script>
+</body>
+</html>
